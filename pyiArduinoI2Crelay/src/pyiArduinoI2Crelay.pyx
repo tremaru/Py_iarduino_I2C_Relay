@@ -42,7 +42,7 @@ LOW = 0x00
 
 from iarduino_I2C_Relay cimport iarduino_I2C_Relay
 
-cdef class pyiarduinoI2Crelay:
+cdef class pyiArduinoI2Crelay:
 	cdef iarduino_I2C_Relay c_relay
 
 	def __cinit__(self, address=None):

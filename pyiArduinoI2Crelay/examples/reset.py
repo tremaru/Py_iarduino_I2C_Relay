@@ -1,9 +1,9 @@
 #encoding=utf-8
 # Данный пример демонстрирует программную перезагрузку модуля.	#
-from pyiarduinoI2Crelay import *								#	Подключаем библиотеку для работы с реле и силовыми ключами.
+from pyiArduinoI2Crelay import *								#	Подключаем библиотеку для работы с реле и силовыми ключами.
 from time import sleep											#	Подключаем метод sleep библиотеки time.
 																#	
-relay = pyiarduinoI2Crelay(0x09)								#	Объявляем объект relay для работы с функциями и методами библиотеки iarduino_I2C_Relay, указывая адрес модуля на шине I2C.
+relay = pyiArduinoI2Crelay(0x09)								#	Объявляем объект relay для работы с функциями и методами библиотеки iarduino_I2C_Relay, указывая адрес модуля на шине I2C.
 while True:														#	Входим в бесконечный цикл
 	relay.digitalWrite(ALL_CHANNEL, HIGH)						#	Включаем все каналы модуля.
 	sleep(2)													#	Ждём две секунды.
