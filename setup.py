@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
 	name = 'pyiArduinoI2Crelay',
 	package = ['pyiArduinoI2Crelay'],
-	version = '1.3',
+	version = '1.4',
 	description = 'iarduino I2C Relay module',
 	author = 'iarduino.ru',
 	author_email = 'shop@iarduino.ru',
