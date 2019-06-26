@@ -1,13 +1,30 @@
-from distutils.core import setup
-setup(
-	name = 'pyiArduinoI2Crelay',
-	package = ['pyiArduinoI2Crelay'],
-	version = '1.4',
-	description = 'iarduino I2C Relay module',
-	author = 'iarduino.ru',
-	author_email = 'shop@iarduino.ru',
-	url = 'https://github.com/tremaru/pyiArduinoI2Crelay',
-	download_url = 'https://github.com/tremaru/pyiArduinoI2Crelay/tarball/1.0',
-	keywords = ['Hardware','I2C','Raspberry Pi','iarduino.ru', 'Relay','Solid State Relay', 'Power Mosfets'],
-	classifiers = [],
- )
+from setuptools import setup
+from distutils.extension import Extension
+from Cython.Build import cythonize
+from Cython.Distutils import build_ext
+
+def readme():
+	with open('README.md') as readme:
+		return readme.read()
+
+setup(name='pyiArduinoI2Crelay',
+	version='1.6.3',
+	description='iarduino.ru module for Raspberry Pi',
+	long_description=readme(),
+	classifiers=[
+		'Programming Language :: Python :: 3',
+	],
+	url='http://github.com/tremaru/pyiArduinoI2Crelay',
+	author='iarduino.ru',
+	author_email='shop@iarduino.ru',
+	license='MIT',
+	package=['pyiArduinoI2Crelay'],
+	ext_modules = [Extension(
+		name="pyiArduinoI2Crelay",
+		sources=["pyiArduinoI2Crelay/pyiArduinoI2Crelay.cpp"])],
+	include_package_data=True,
+	python_requires='>=3, <4',
+	cmdclass = {
+		"build_ext": build_ext
+	}
+)
