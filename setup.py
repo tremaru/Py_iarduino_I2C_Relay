@@ -8,7 +8,7 @@ def readme():
 		return readme.read()
 
 setup(name='pyiArduinoI2Crelay',
-	version='1.6.3',
+	version='1.6.4.dev9',
 	description='iarduino.ru module for Raspberry Pi',
 	long_description=readme(),
 	classifiers=[
@@ -23,7 +23,10 @@ setup(name='pyiArduinoI2Crelay',
 		name="pyiArduinoI2Crelay",
 		sources=["pyiArduinoI2Crelay/pyiArduinoI2Crelay.cpp"])],
 	include_package_data=True,
-	python_requires='>=3, <4',
+        zip_safe=False,
+	python_requires='>=3',
+        setup_requires=['Cython'],
+        install_requires=['Cython'],
 	cmdclass = {
 		"build_ext": build_ext
 	}
