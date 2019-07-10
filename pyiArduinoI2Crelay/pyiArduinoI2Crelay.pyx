@@ -1,4 +1,5 @@
 # distutils: language = c++
+# cython: language_level = 3
 #encoding = utf-8
 DEF_CHIP_ID	=	0x3C
 DEF_MODEL_2RM	=	0x0A
@@ -109,3 +110,15 @@ cdef class pyiArduinoI2Crelay:
 
 	def resCurrentProtection(self, unsigned char channel):
 		self.c_relay.resCurrentProtection(channel)
+
+	def enableWDT(self, unsigned char time):
+		return self.c_relay.enableWDT(time)
+
+	def disableWDT(self):
+		return self.c_relay.disableWDT()
+
+	def resetWDT(self):
+		return self.c_relay.resetWDT()
+
+	def getStateWDT(self):
+		return self.c_relay.getStateWDT()

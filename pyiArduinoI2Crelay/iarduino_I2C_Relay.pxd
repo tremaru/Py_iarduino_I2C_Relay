@@ -24,3 +24,7 @@ cdef extern from "iarduino_I2C_Relay.h":
 		bint getCurrentProtection(unsigned char)
 		void delCurrentProtection(unsigned char)
 		void resCurrentProtection(unsigned char) 
+		bint enableWDT(unsigned char)
+		bint disableWDT()
+		bint resetWDT()
+		bint getStateWDT()
