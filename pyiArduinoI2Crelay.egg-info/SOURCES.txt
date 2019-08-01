@@ -1,7 +1,0 @@
-setup.cfg
-setup.py
-pyiArduinoI2Crelay/pyiArduinoI2Crelay.cpp
-pyiArduinoI2Crelay.egg-info/PKG-INFO
-pyiArduinoI2Crelay.egg-info/SOURCES.txt
-pyiArduinoI2Crelay.egg-info/dependency_links.txt
-pyiArduinoI2Crelay.egg-info/top_level.txt
