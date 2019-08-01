@@ -1,14 +1,12 @@
 from distutils.core import setup
 from distutils.extension import Extension
-#from Cython.Build import cythonize
-#from Cython.Distutils import build_ext
 
 def readme():
 	with open('README.md') as readme:
 		return readme.read()
 
 setup(name='pyiArduinoI2Crelay',
-	version='1.6.5',
+	version='1.6.7',
 	description='iarduino.ru module for Raspberry Pi',
 	long_description=readme(),
 	classifiers=[
