@@ -3,5 +3,5 @@ from distutils.core import setup
 from Cython.Build import cythonize
 
 setup(
-  ext_modules = cythonize("pyiArduinoI2Cexpander.pyx")
+  ext_modules = cythonize("pyiArduinoI2Crelay.pyx")
 )
