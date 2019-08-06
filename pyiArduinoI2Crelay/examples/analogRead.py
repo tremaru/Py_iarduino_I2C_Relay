@@ -2,7 +2,6 @@
 # Данный пример считывает текущее состояние ШИМ на каналах модуля.
 from pyiArduinoI2Crelay import *   # Подключаем модуль для работы с ключём
 from time import sleep
-import analogReadTest as test
 pwrkey = pyiArduinoI2Crelay(9)     # Объявляем объект pwrkey
                                    #
 #  Устанавливаем ШИМ на каналах модуля:
