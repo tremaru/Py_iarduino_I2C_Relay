@@ -10,8 +10,8 @@ relay.digitalWrite(4,HIGH);            # Включаем  4 канал.
 #  Проверяем состояние каналов модуля в цикле:
 for i in range(4):                     # Проходим по всем каналам модуля.
     print("Канал № %s" % (i), end='')  # Выводим номер очередного канала.
-    if relay.digitalRead(i):           # Если функция digitalRead() вернула True
-        print(" включен ", end='')     # значит канал включён.
+    if relay.digitalRead(i + 1):       # Если функция digitalRead() вернула True
+        print(" включен\t", end='')    # значит канал включён.
     else:                              # Если функция digitalRead() вернула False 
         print(" отключен\t", end='')   # значит канал отключён.
 print("--------")                      #

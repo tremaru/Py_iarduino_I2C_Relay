@@ -360,3 +360,7 @@ bool	iarduino_I2C_Relay::_checkModel	(uint8_t val){																	//	Пара�
 			                            valModel =   0; valAccess = 0; return false;									//	Иначе, если не выполнено ни одно из предыдущих условий,																то обнуляем  значение        переменной «valModel», обнуляем  значение          переменной «valAccess» и возвращаем false.
 }																														//
 																														//
+void iarduino_I2C_Relay::changeBus(char* bus)
+{
+        objI2C->changeBus(bus);
+}
