@@ -1,14 +1,14 @@
 from distutils.core import setup
 from distutils.extension import Extension
 
-def readme():
-    with open('README.md') as readme:
-        return readme.read()
+with open("README.md", "r") as readme:
+    long_description = readme.read()
 
 setup(name='pyiArduinoI2Crelay',
-    version='1.6.9',
+    version='1.6.7',
     description='iarduino.ru module for Raspberry Pi',
-    long_description=readme(),
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     classifiers=[
         'Programming Language :: Python :: 3',
     ],
