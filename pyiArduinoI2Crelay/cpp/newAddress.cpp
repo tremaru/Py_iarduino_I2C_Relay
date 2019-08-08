@@ -2,7 +2,7 @@
 #define delay(A) usleep(A*1000)                                                                             //		
 #include <iostream>                                                                                         //  
 #include <stdint.h>
-#include "iarduino_I2C_Relay.h"                                                                             //  Подключаем библиотеку для работы с реле и силовыми ключами.
+#include "../iarduino_I2C_Relay.h"                                                                          //  Подключаем библиотеку для работы с реле и силовыми ключами.
 
 uint8_t i = 0x09;                                                                                           //  Назначаемый модулю новый адрес (0x07 < адрес < 0x7F).
                                                                                                             //
