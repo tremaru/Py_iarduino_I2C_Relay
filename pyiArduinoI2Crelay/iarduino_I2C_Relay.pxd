@@ -28,4 +28,6 @@ cdef extern from "iarduino_I2C_Relay.h":
         bint disableWDT()
         bint resetWDT()
         bint getStateWDT()
-        void changeBus(char*)
+cdef extern from "iarduino_I2C_Relay_PI.h":
+    cdef cppclass iarduino_I2C:
+        void changeBus(unsigned char)

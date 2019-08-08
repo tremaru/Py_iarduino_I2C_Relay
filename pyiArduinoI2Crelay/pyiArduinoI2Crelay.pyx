@@ -42,9 +42,11 @@ HIGH = 0x01
 LOW = 0x00
 
 from iarduino_I2C_Relay cimport iarduino_I2C_Relay
+from iarduino_I2C_Relay cimport iarduino_I2C
 
 cdef class pyiArduinoI2Crelay:
     cdef iarduino_I2C_Relay c_relay
+    cdef iarduino_I2C b_relay
 
     def __cinit__(self, address=None):
         if address is not None:
@@ -123,5 +125,5 @@ cdef class pyiArduinoI2Crelay:
     def getStateWDT(self):
         return self.c_relay.getStateWDT()
 
-    def changeBus(self, char *bus):
-        self.c_relay.changeBus(bus)
+    def changeBus(self, unsigned char bus):
+        self.b_relay.changeBus(bus)

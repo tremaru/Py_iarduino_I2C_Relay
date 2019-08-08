@@ -5,7 +5,8 @@
     "distutils": {
         "depends": [
             "iarduino_I2C_Relay.cpp",
-            "iarduino_I2C_Relay.h"
+            "iarduino_I2C_Relay.h",
+            "iarduino_I2C_Relay_PI.h"
         ],
         "include_dirs": [
             "."
@@ -633,6 +634,7 @@ static CYTHON_INLINE float __PYX_NAN() {
 #include "stdexcept"
 #include "typeinfo"
 #include "iarduino_I2C_Relay.h"
+#include "iarduino_I2C_Relay_PI.h"
 #ifdef _OPENMP
 #include <omp.h>
 #endif /* _OPENMP */
@@ -848,16 +850,17 @@ static const char *__pyx_f[] = {
 /*--- Type declarations ---*/
 struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay;
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":46
- * from iarduino_I2C_Relay cimport iarduino_I2C_Relay
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":47
+ * from iarduino_I2C_Relay cimport iarduino_I2C
  * 
  * cdef class pyiArduinoI2Crelay:             # <<<<<<<<<<<<<<
  *     cdef iarduino_I2C_Relay c_relay
- * 
+ *     cdef iarduino_I2C b_relay
  */
 struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay {
   PyObject_HEAD
   iarduino_I2C_Relay c_relay;
+  iarduino_I2C b_relay;
 };
 
 
@@ -1296,7 +1299,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
 static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_42disableWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_44resetWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_46getStateWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_48changeBus(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, char *__pyx_v_bus); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_48changeBus(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_bus); /* proto */
 static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_50__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_52__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
@@ -1330,8 +1333,8 @@ static PyObject *__pyx_tuple_;
 static PyObject *__pyx_tuple__2;
 /* Late includes */
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":49
- *     cdef iarduino_I2C_Relay c_relay
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":51
+ *     cdef iarduino_I2C b_relay
  * 
  *     def __cinit__(self, address=None):             # <<<<<<<<<<<<<<
  *         if address is not None:
@@ -1367,7 +1370,7 @@ static int __pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crel
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(1, 49, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(1, 51, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -1381,7 +1384,7 @@ static int __pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crel
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 49, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__cinit__", 0, 0, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 51, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("pyiArduinoI2Crelay.pyiArduinoI2Crelay.pyiArduinoI2Crelay.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -1403,7 +1406,7 @@ static int __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crel
   iarduino_I2C_Relay __pyx_t_4;
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":50
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":52
  * 
  *     def __cinit__(self, address=None):
  *         if address is not None:             # <<<<<<<<<<<<<<
@@ -1414,23 +1417,23 @@ static int __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crel
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":51
+    /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":53
  *     def __cinit__(self, address=None):
  *         if address is not None:
  *             self.c_relay = iarduino_I2C_Relay(address)             # <<<<<<<<<<<<<<
  *             self.c_relay.begin()
  *         else:
  */
-    __pyx_t_3 = __Pyx_PyInt_As_unsigned_char(__pyx_v_address); if (unlikely((__pyx_t_3 == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 51, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_As_unsigned_char(__pyx_v_address); if (unlikely((__pyx_t_3 == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 53, __pyx_L1_error)
     try {
       __pyx_t_4 = iarduino_I2C_Relay(__pyx_t_3);
     } catch(...) {
       __Pyx_CppExn2PyErr();
-      __PYX_ERR(1, 51, __pyx_L1_error)
+      __PYX_ERR(1, 53, __pyx_L1_error)
     }
     __pyx_v_self->c_relay = __pyx_t_4;
 
-    /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":52
+    /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":54
  *         if address is not None:
  *             self.c_relay = iarduino_I2C_Relay(address)
  *             self.c_relay.begin()             # <<<<<<<<<<<<<<
@@ -1439,7 +1442,7 @@ static int __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crel
  */
     (void)(__pyx_v_self->c_relay.begin());
 
-    /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":50
+    /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":52
  * 
  *     def __cinit__(self, address=None):
  *         if address is not None:             # <<<<<<<<<<<<<<
@@ -1449,7 +1452,7 @@ static int __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crel
     goto __pyx_L3;
   }
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":54
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":56
  *             self.c_relay.begin()
  *         else:
  *             self.c_relay = iarduino_I2C_Relay()             # <<<<<<<<<<<<<<
@@ -1461,11 +1464,11 @@ static int __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crel
       __pyx_t_4 = iarduino_I2C_Relay();
     } catch(...) {
       __Pyx_CppExn2PyErr();
-      __PYX_ERR(1, 54, __pyx_L1_error)
+      __PYX_ERR(1, 56, __pyx_L1_error)
     }
     __pyx_v_self->c_relay = __pyx_t_4;
 
-    /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":55
+    /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":57
  *         else:
  *             self.c_relay = iarduino_I2C_Relay()
  *             self.c_relay.begin()             # <<<<<<<<<<<<<<
@@ -1476,8 +1479,8 @@ static int __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crel
   }
   __pyx_L3:;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":49
- *     cdef iarduino_I2C_Relay c_relay
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":51
+ *     cdef iarduino_I2C b_relay
  * 
  *     def __cinit__(self, address=None):             # <<<<<<<<<<<<<<
  *         if address is not None:
@@ -1495,7 +1498,7 @@ static int __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crel
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":57
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":59
  *             self.c_relay.begin()
  * 
  *     def begin(self):             # <<<<<<<<<<<<<<
@@ -1522,7 +1525,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("begin", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":58
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":60
  * 
  *     def begin(self):
  *         return self.c_relay.begin()             # <<<<<<<<<<<<<<
@@ -1530,13 +1533,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def changeAddress(self, unsigned char newAddr):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.begin()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 58, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.begin()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":57
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":59
  *             self.c_relay.begin()
  * 
  *     def begin(self):             # <<<<<<<<<<<<<<
@@ -1555,7 +1558,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":60
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":62
  *         return self.c_relay.begin()
  * 
  *     def changeAddress(self, unsigned char newAddr):             # <<<<<<<<<<<<<<
@@ -1571,7 +1574,7 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("changeAddress (wrapper)", 0);
   assert(__pyx_arg_newAddr); {
-    __pyx_v_newAddr = __Pyx_PyInt_As_unsigned_char(__pyx_arg_newAddr); if (unlikely((__pyx_v_newAddr == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 60, __pyx_L3_error)
+    __pyx_v_newAddr = __Pyx_PyInt_As_unsigned_char(__pyx_arg_newAddr); if (unlikely((__pyx_v_newAddr == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 62, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -1592,7 +1595,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("changeAddress", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":61
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":63
  * 
  *     def changeAddress(self, unsigned char newAddr):
  *         return self.c_relay.changeAddress(newAddr)             # <<<<<<<<<<<<<<
@@ -1600,13 +1603,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def reset(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.changeAddress(__pyx_v_newAddr)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 61, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.changeAddress(__pyx_v_newAddr)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":60
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":62
  *         return self.c_relay.begin()
  * 
  *     def changeAddress(self, unsigned char newAddr):             # <<<<<<<<<<<<<<
@@ -1625,7 +1628,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":63
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":65
  *         return self.c_relay.changeAddress(newAddr)
  * 
  *     def reset(self):             # <<<<<<<<<<<<<<
@@ -1652,7 +1655,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("reset", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":64
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":66
  * 
  *     def reset(self):
  *         return self.c_relay.reset()             # <<<<<<<<<<<<<<
@@ -1660,13 +1663,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def getAddress(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.reset()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 64, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.reset()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":63
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":65
  *         return self.c_relay.changeAddress(newAddr)
  * 
  *     def reset(self):             # <<<<<<<<<<<<<<
@@ -1685,7 +1688,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":66
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":68
  *         return self.c_relay.reset()
  * 
  *     def getAddress(self):             # <<<<<<<<<<<<<<
@@ -1712,7 +1715,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("getAddress", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":67
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":69
  * 
  *     def getAddress(self):
  *         return self.c_relay.getAddress()             # <<<<<<<<<<<<<<
@@ -1720,13 +1723,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def getVersion(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_char(__pyx_v_self->c_relay.getAddress()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 67, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_char(__pyx_v_self->c_relay.getAddress()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":66
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":68
  *         return self.c_relay.reset()
  * 
  *     def getAddress(self):             # <<<<<<<<<<<<<<
@@ -1745,7 +1748,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":69
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":71
  *         return self.c_relay.getAddress()
  * 
  *     def getVersion(self):             # <<<<<<<<<<<<<<
@@ -1772,7 +1775,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("getVersion", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":70
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":72
  * 
  *     def getVersion(self):
  *         return self.c_relay.getVersion()             # <<<<<<<<<<<<<<
@@ -1780,13 +1783,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def getModel(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_char(__pyx_v_self->c_relay.getVersion()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 70, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_char(__pyx_v_self->c_relay.getVersion()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":69
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":71
  *         return self.c_relay.getAddress()
  * 
  *     def getVersion(self):             # <<<<<<<<<<<<<<
@@ -1805,7 +1808,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":72
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":74
  *         return self.c_relay.getVersion()
  * 
  *     def getModel(self):             # <<<<<<<<<<<<<<
@@ -1832,7 +1835,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("getModel", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":73
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":75
  * 
  *     def getModel(self):
  *         return self.c_relay.getModel()             # <<<<<<<<<<<<<<
@@ -1840,13 +1843,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def digitalWrite(self, unsigned char channel, unsigned char level):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_char(__pyx_v_self->c_relay.getModel()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 73, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_char(__pyx_v_self->c_relay.getModel()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":72
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":74
  *         return self.c_relay.getVersion()
  * 
  *     def getModel(self):             # <<<<<<<<<<<<<<
@@ -1865,7 +1868,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":75
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":77
  *         return self.c_relay.getModel()
  * 
  *     def digitalWrite(self, unsigned char channel, unsigned char level):             # <<<<<<<<<<<<<<
@@ -1904,11 +1907,11 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_level)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("digitalWrite", 1, 2, 2, 1); __PYX_ERR(1, 75, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("digitalWrite", 1, 2, 2, 1); __PYX_ERR(1, 77, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "digitalWrite") < 0)) __PYX_ERR(1, 75, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "digitalWrite") < 0)) __PYX_ERR(1, 77, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -1916,12 +1919,12 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 75, __pyx_L3_error)
-    __pyx_v_level = __Pyx_PyInt_As_unsigned_char(values[1]); if (unlikely((__pyx_v_level == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 75, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 77, __pyx_L3_error)
+    __pyx_v_level = __Pyx_PyInt_As_unsigned_char(values[1]); if (unlikely((__pyx_v_level == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 77, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("digitalWrite", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 75, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("digitalWrite", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 77, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("pyiArduinoI2Crelay.pyiArduinoI2Crelay.pyiArduinoI2Crelay.digitalWrite", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -1939,7 +1942,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("digitalWrite", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":76
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":78
  * 
  *     def digitalWrite(self, unsigned char channel, unsigned char level):
  *         self.c_relay.digitalWrite(channel, level)             # <<<<<<<<<<<<<<
@@ -1948,7 +1951,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
   __pyx_v_self->c_relay.digitalWrite(__pyx_v_channel, __pyx_v_level);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":75
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":77
  *         return self.c_relay.getModel()
  * 
  *     def digitalWrite(self, unsigned char channel, unsigned char level):             # <<<<<<<<<<<<<<
@@ -1963,7 +1966,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":78
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":80
  *         self.c_relay.digitalWrite(channel, level)
  * 
  *     def digitalRead(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -1979,7 +1982,7 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("digitalRead (wrapper)", 0);
   assert(__pyx_arg_channel); {
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 78, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 80, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2000,7 +2003,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("digitalRead", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":79
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":81
  * 
  *     def digitalRead(self, unsigned char channel):
  *         return self.c_relay.digitalRead(channel)             # <<<<<<<<<<<<<<
@@ -2008,13 +2011,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def analogWrite(self, unsigned char channel, unsigned short level):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_char(__pyx_v_self->c_relay.digitalRead(__pyx_v_channel)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 79, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_char(__pyx_v_self->c_relay.digitalRead(__pyx_v_channel)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":78
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":80
  *         self.c_relay.digitalWrite(channel, level)
  * 
  *     def digitalRead(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2033,7 +2036,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":81
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":83
  *         return self.c_relay.digitalRead(channel)
  * 
  *     def analogWrite(self, unsigned char channel, unsigned short level):             # <<<<<<<<<<<<<<
@@ -2072,11 +2075,11 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_level)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("analogWrite", 1, 2, 2, 1); __PYX_ERR(1, 81, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("analogWrite", 1, 2, 2, 1); __PYX_ERR(1, 83, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "analogWrite") < 0)) __PYX_ERR(1, 81, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "analogWrite") < 0)) __PYX_ERR(1, 83, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -2084,12 +2087,12 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 81, __pyx_L3_error)
-    __pyx_v_level = __Pyx_PyInt_As_unsigned_short(values[1]); if (unlikely((__pyx_v_level == (unsigned short)-1) && PyErr_Occurred())) __PYX_ERR(1, 81, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 83, __pyx_L3_error)
+    __pyx_v_level = __Pyx_PyInt_As_unsigned_short(values[1]); if (unlikely((__pyx_v_level == (unsigned short)-1) && PyErr_Occurred())) __PYX_ERR(1, 83, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("analogWrite", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 81, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("analogWrite", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 83, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("pyiArduinoI2Crelay.pyiArduinoI2Crelay.pyiArduinoI2Crelay.analogWrite", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2107,7 +2110,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("analogWrite", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":82
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":84
  * 
  *     def analogWrite(self, unsigned char channel, unsigned short level):
  *         self.c_relay.analogWrite(channel, level)             # <<<<<<<<<<<<<<
@@ -2116,7 +2119,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
   __pyx_v_self->c_relay.analogWrite(__pyx_v_channel, __pyx_v_level);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":81
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":83
  *         return self.c_relay.digitalRead(channel)
  * 
  *     def analogWrite(self, unsigned char channel, unsigned short level):             # <<<<<<<<<<<<<<
@@ -2131,7 +2134,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":84
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":86
  *         self.c_relay.analogWrite(channel, level)
  * 
  *     def analogRead(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2147,7 +2150,7 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("analogRead (wrapper)", 0);
   assert(__pyx_arg_channel); {
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 84, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 86, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2168,7 +2171,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("analogRead", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":85
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":87
  * 
  *     def analogRead(self, unsigned char channel):
  *         return self.c_relay.analogRead(channel)             # <<<<<<<<<<<<<<
@@ -2176,13 +2179,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def analogAveraging(self, unsigned char coefficient):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_short(__pyx_v_self->c_relay.analogRead(__pyx_v_channel)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 85, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_short(__pyx_v_self->c_relay.analogRead(__pyx_v_channel)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 87, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":84
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":86
  *         self.c_relay.analogWrite(channel, level)
  * 
  *     def analogRead(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2201,7 +2204,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":87
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":89
  *         return self.c_relay.analogRead(channel)
  * 
  *     def analogAveraging(self, unsigned char coefficient):             # <<<<<<<<<<<<<<
@@ -2217,7 +2220,7 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("analogAveraging (wrapper)", 0);
   assert(__pyx_arg_coefficient); {
-    __pyx_v_coefficient = __Pyx_PyInt_As_unsigned_char(__pyx_arg_coefficient); if (unlikely((__pyx_v_coefficient == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 87, __pyx_L3_error)
+    __pyx_v_coefficient = __Pyx_PyInt_As_unsigned_char(__pyx_arg_coefficient); if (unlikely((__pyx_v_coefficient == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 89, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2237,7 +2240,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("analogAveraging", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":88
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":90
  * 
  *     def analogAveraging(self, unsigned char coefficient):
  *         self.c_relay.analogAveraging(coefficient)             # <<<<<<<<<<<<<<
@@ -2246,7 +2249,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
   __pyx_v_self->c_relay.analogAveraging(__pyx_v_coefficient);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":87
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":89
  *         return self.c_relay.analogRead(channel)
  * 
  *     def analogAveraging(self, unsigned char coefficient):             # <<<<<<<<<<<<<<
@@ -2261,7 +2264,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":90
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":92
  *         self.c_relay.analogAveraging(coefficient)
  * 
  *     def freqPWM(self, unsigned short frequency):             # <<<<<<<<<<<<<<
@@ -2277,7 +2280,7 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("freqPWM (wrapper)", 0);
   assert(__pyx_arg_frequency); {
-    __pyx_v_frequency = __Pyx_PyInt_As_unsigned_short(__pyx_arg_frequency); if (unlikely((__pyx_v_frequency == (unsigned short)-1) && PyErr_Occurred())) __PYX_ERR(1, 90, __pyx_L3_error)
+    __pyx_v_frequency = __Pyx_PyInt_As_unsigned_short(__pyx_arg_frequency); if (unlikely((__pyx_v_frequency == (unsigned short)-1) && PyErr_Occurred())) __PYX_ERR(1, 92, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2297,7 +2300,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("freqPWM", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":91
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":93
  * 
  *     def freqPWM(self, unsigned short frequency):
  *         self.c_relay.freqPWM(frequency)             # <<<<<<<<<<<<<<
@@ -2306,7 +2309,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
   __pyx_v_self->c_relay.freqPWM(__pyx_v_frequency);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":90
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":92
  *         self.c_relay.analogAveraging(coefficient)
  * 
  *     def freqPWM(self, unsigned short frequency):             # <<<<<<<<<<<<<<
@@ -2321,7 +2324,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":93
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":95
  *         self.c_relay.freqPWM(frequency)
  * 
  *     def currentWrite(self, unsigned char channel, float current):             # <<<<<<<<<<<<<<
@@ -2360,11 +2363,11 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_current)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 2, 2, 1); __PYX_ERR(1, 93, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 2, 2, 1); __PYX_ERR(1, 95, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "currentWrite") < 0)) __PYX_ERR(1, 93, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "currentWrite") < 0)) __PYX_ERR(1, 95, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -2372,12 +2375,12 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 93, __pyx_L3_error)
-    __pyx_v_current = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_current == (float)-1) && PyErr_Occurred())) __PYX_ERR(1, 93, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 95, __pyx_L3_error)
+    __pyx_v_current = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_current == (float)-1) && PyErr_Occurred())) __PYX_ERR(1, 95, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 93, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 95, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("pyiArduinoI2Crelay.pyiArduinoI2Crelay.pyiArduinoI2Crelay.currentWrite", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2395,7 +2398,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("currentWrite", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":94
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":96
  * 
  *     def currentWrite(self, unsigned char channel, float current):
  *         self.c_relay.currentWrite(channel, current)             # <<<<<<<<<<<<<<
@@ -2404,7 +2407,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
   __pyx_v_self->c_relay.currentWrite(__pyx_v_channel, __pyx_v_current);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":93
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":95
  *         self.c_relay.freqPWM(frequency)
  * 
  *     def currentWrite(self, unsigned char channel, float current):             # <<<<<<<<<<<<<<
@@ -2419,7 +2422,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":96
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":98
  *         self.c_relay.currentWrite(channel, current)
  * 
  *     def currentWrite(self, unsigned char channel, float current,unsigned char& Rsh):             # <<<<<<<<<<<<<<
@@ -2461,17 +2464,17 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_current)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 3, 3, 1); __PYX_ERR(1, 96, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 3, 3, 1); __PYX_ERR(1, 98, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_Rsh)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 3, 3, 2); __PYX_ERR(1, 96, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 3, 3, 2); __PYX_ERR(1, 98, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "currentWrite") < 0)) __PYX_ERR(1, 96, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "currentWrite") < 0)) __PYX_ERR(1, 98, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -2480,13 +2483,13 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 96, __pyx_L3_error)
-    __pyx_v_current = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_current == (float)-1) && PyErr_Occurred())) __PYX_ERR(1, 96, __pyx_L3_error)
-    __pyx_v_Rsh = __Pyx_PyInt_As_unsigned_char(values[2]); if (unlikely((__pyx_v_Rsh == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 96, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 98, __pyx_L3_error)
+    __pyx_v_current = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_current == (float)-1) && PyErr_Occurred())) __PYX_ERR(1, 98, __pyx_L3_error)
+    __pyx_v_Rsh = __Pyx_PyInt_As_unsigned_char(values[2]); if (unlikely((__pyx_v_Rsh == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 98, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 96, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 98, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("pyiArduinoI2Crelay.pyiArduinoI2Crelay.pyiArduinoI2Crelay.currentWrite", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2504,7 +2507,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("currentWrite", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":97
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":99
  * 
  *     def currentWrite(self, unsigned char channel, float current,unsigned char& Rsh):
  *         self.c_relay.currentWrite(channel, current, Rsh)             # <<<<<<<<<<<<<<
@@ -2513,7 +2516,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
   __pyx_v_self->c_relay.currentWrite(__pyx_v_channel, __pyx_v_current, __pyx_v_Rsh);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":96
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":98
  *         self.c_relay.currentWrite(channel, current)
  * 
  *     def currentWrite(self, unsigned char channel, float current,unsigned char& Rsh):             # <<<<<<<<<<<<<<
@@ -2528,7 +2531,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":99
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":101
  *         self.c_relay.currentWrite(channel, current, Rsh)
  * 
  *     def currentRead(self,unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2544,7 +2547,7 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("currentRead (wrapper)", 0);
   assert(__pyx_arg_channel); {
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 99, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 101, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2565,7 +2568,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("currentRead", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":100
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":102
  * 
  *     def currentRead(self,unsigned char channel):
  *         return self.c_relay.currentRead(channel)             # <<<<<<<<<<<<<<
@@ -2573,13 +2576,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def setCurrentProtection(self, unsigned char channel, float current, unsigned char rtype):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->c_relay.currentRead(__pyx_v_channel)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 100, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->c_relay.currentRead(__pyx_v_channel)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":99
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":101
  *         self.c_relay.currentWrite(channel, current, Rsh)
  * 
  *     def currentRead(self,unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2598,7 +2601,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":102
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":104
  *         return self.c_relay.currentRead(channel)
  * 
  *     def setCurrentProtection(self, unsigned char channel, float current, unsigned char rtype):             # <<<<<<<<<<<<<<
@@ -2640,17 +2643,17 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_current)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("setCurrentProtection", 1, 3, 3, 1); __PYX_ERR(1, 102, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setCurrentProtection", 1, 3, 3, 1); __PYX_ERR(1, 104, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_rtype)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("setCurrentProtection", 1, 3, 3, 2); __PYX_ERR(1, 102, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setCurrentProtection", 1, 3, 3, 2); __PYX_ERR(1, 104, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "setCurrentProtection") < 0)) __PYX_ERR(1, 102, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "setCurrentProtection") < 0)) __PYX_ERR(1, 104, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -2659,13 +2662,13 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 102, __pyx_L3_error)
-    __pyx_v_current = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_current == (float)-1) && PyErr_Occurred())) __PYX_ERR(1, 102, __pyx_L3_error)
-    __pyx_v_rtype = __Pyx_PyInt_As_unsigned_char(values[2]); if (unlikely((__pyx_v_rtype == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 102, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 104, __pyx_L3_error)
+    __pyx_v_current = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_current == (float)-1) && PyErr_Occurred())) __PYX_ERR(1, 104, __pyx_L3_error)
+    __pyx_v_rtype = __Pyx_PyInt_As_unsigned_char(values[2]); if (unlikely((__pyx_v_rtype == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 104, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setCurrentProtection", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 102, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setCurrentProtection", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 104, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("pyiArduinoI2Crelay.pyiArduinoI2Crelay.pyiArduinoI2Crelay.setCurrentProtection", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2683,7 +2686,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("setCurrentProtection", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":103
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":105
  * 
  *     def setCurrentProtection(self, unsigned char channel, float current, unsigned char rtype):
  *         self.c_relay.setCurrentProtection(channel, current, rtype)             # <<<<<<<<<<<<<<
@@ -2692,7 +2695,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
   __pyx_v_self->c_relay.setCurrentProtection(__pyx_v_channel, __pyx_v_current, __pyx_v_rtype);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":102
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":104
  *         return self.c_relay.currentRead(channel)
  * 
  *     def setCurrentProtection(self, unsigned char channel, float current, unsigned char rtype):             # <<<<<<<<<<<<<<
@@ -2707,7 +2710,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":105
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":107
  *         self.c_relay.setCurrentProtection(channel, current, rtype)
  * 
  *     def getCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2723,7 +2726,7 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getCurrentProtection (wrapper)", 0);
   assert(__pyx_arg_channel); {
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 105, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 107, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2744,7 +2747,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("getCurrentProtection", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":106
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":108
  * 
  *     def getCurrentProtection(self, unsigned char channel):
  *         return self.c_relay.getCurrentProtection(channel)             # <<<<<<<<<<<<<<
@@ -2752,13 +2755,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def delCurrentProtection(self, unsigned char channel):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.getCurrentProtection(__pyx_v_channel)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 106, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.getCurrentProtection(__pyx_v_channel)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":105
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":107
  *         self.c_relay.setCurrentProtection(channel, current, rtype)
  * 
  *     def getCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2777,7 +2780,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":108
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":110
  *         return self.c_relay.getCurrentProtection(channel)
  * 
  *     def delCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2793,7 +2796,7 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("delCurrentProtection (wrapper)", 0);
   assert(__pyx_arg_channel); {
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 108, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 110, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2813,7 +2816,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("delCurrentProtection", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":109
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":111
  * 
  *     def delCurrentProtection(self, unsigned char channel):
  *         self.c_relay.delCurrentProtection(channel)             # <<<<<<<<<<<<<<
@@ -2822,7 +2825,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
   __pyx_v_self->c_relay.delCurrentProtection(__pyx_v_channel);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":108
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":110
  *         return self.c_relay.getCurrentProtection(channel)
  * 
  *     def delCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2837,7 +2840,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":111
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":113
  *         self.c_relay.delCurrentProtection(channel)
  * 
  *     def resCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2853,7 +2856,7 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("resCurrentProtection (wrapper)", 0);
   assert(__pyx_arg_channel); {
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 111, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 113, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2873,7 +2876,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("resCurrentProtection", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":112
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":114
  * 
  *     def resCurrentProtection(self, unsigned char channel):
  *         self.c_relay.resCurrentProtection(channel)             # <<<<<<<<<<<<<<
@@ -2882,7 +2885,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
   __pyx_v_self->c_relay.resCurrentProtection(__pyx_v_channel);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":111
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":113
  *         self.c_relay.delCurrentProtection(channel)
  * 
  *     def resCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2897,7 +2900,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":114
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":116
  *         self.c_relay.resCurrentProtection(channel)
  * 
  *     def enableWDT(self, unsigned char time):             # <<<<<<<<<<<<<<
@@ -2913,7 +2916,7 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("enableWDT (wrapper)", 0);
   assert(__pyx_arg_time); {
-    __pyx_v_time = __Pyx_PyInt_As_unsigned_char(__pyx_arg_time); if (unlikely((__pyx_v_time == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 114, __pyx_L3_error)
+    __pyx_v_time = __Pyx_PyInt_As_unsigned_char(__pyx_arg_time); if (unlikely((__pyx_v_time == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 116, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2934,7 +2937,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("enableWDT", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":115
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":117
  * 
  *     def enableWDT(self, unsigned char time):
  *         return self.c_relay.enableWDT(time)             # <<<<<<<<<<<<<<
@@ -2942,13 +2945,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def disableWDT(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.enableWDT(__pyx_v_time)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 115, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.enableWDT(__pyx_v_time)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":114
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":116
  *         self.c_relay.resCurrentProtection(channel)
  * 
  *     def enableWDT(self, unsigned char time):             # <<<<<<<<<<<<<<
@@ -2967,7 +2970,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":117
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":119
  *         return self.c_relay.enableWDT(time)
  * 
  *     def disableWDT(self):             # <<<<<<<<<<<<<<
@@ -2994,7 +2997,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("disableWDT", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":118
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":120
  * 
  *     def disableWDT(self):
  *         return self.c_relay.disableWDT()             # <<<<<<<<<<<<<<
@@ -3002,13 +3005,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def resetWDT(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.disableWDT()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 118, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.disableWDT()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":117
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":119
  *         return self.c_relay.enableWDT(time)
  * 
  *     def disableWDT(self):             # <<<<<<<<<<<<<<
@@ -3027,7 +3030,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":120
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":122
  *         return self.c_relay.disableWDT()
  * 
  *     def resetWDT(self):             # <<<<<<<<<<<<<<
@@ -3054,7 +3057,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("resetWDT", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":121
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":123
  * 
  *     def resetWDT(self):
  *         return self.c_relay.resetWDT()             # <<<<<<<<<<<<<<
@@ -3062,13 +3065,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def getStateWDT(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.resetWDT()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 121, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.resetWDT()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":120
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":122
  *         return self.c_relay.disableWDT()
  * 
  *     def resetWDT(self):             # <<<<<<<<<<<<<<
@@ -3087,7 +3090,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":123
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":125
  *         return self.c_relay.resetWDT()
  * 
  *     def getStateWDT(self):             # <<<<<<<<<<<<<<
@@ -3114,21 +3117,21 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("getStateWDT", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":124
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":126
  * 
  *     def getStateWDT(self):
  *         return self.c_relay.getStateWDT()             # <<<<<<<<<<<<<<
  * 
- *     def changeBus(self, char *bus):
+ *     def changeBus(self, unsigned char bus):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.getStateWDT()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 124, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.getStateWDT()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":123
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":125
  *         return self.c_relay.resetWDT()
  * 
  *     def getStateWDT(self):             # <<<<<<<<<<<<<<
@@ -3147,22 +3150,22 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":126
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":128
  *         return self.c_relay.getStateWDT()
  * 
- *     def changeBus(self, char *bus):             # <<<<<<<<<<<<<<
- *         self.c_relay.changeBus(bus)
+ *     def changeBus(self, unsigned char bus):             # <<<<<<<<<<<<<<
+ *         self.b_relay.changeBus(bus)
  */
 
 /* Python wrapper */
 static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_49changeBus(PyObject *__pyx_v_self, PyObject *__pyx_arg_bus); /*proto*/
 static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_49changeBus(PyObject *__pyx_v_self, PyObject *__pyx_arg_bus) {
-  char *__pyx_v_bus;
+  unsigned char __pyx_v_bus;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("changeBus (wrapper)", 0);
   assert(__pyx_arg_bus); {
-    __pyx_v_bus = __Pyx_PyObject_AsWritableString(__pyx_arg_bus); if (unlikely((!__pyx_v_bus) && PyErr_Occurred())) __PYX_ERR(1, 126, __pyx_L3_error)
+    __pyx_v_bus = __Pyx_PyInt_As_unsigned_char(__pyx_arg_bus); if (unlikely((__pyx_v_bus == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 128, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -3170,30 +3173,30 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_48changeBus(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((char *)__pyx_v_bus));
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_48changeBus(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_bus));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_48changeBus(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, char *__pyx_v_bus) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_48changeBus(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_bus) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("changeBus", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":127
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":129
  * 
- *     def changeBus(self, char *bus):
- *         self.c_relay.changeBus(bus)             # <<<<<<<<<<<<<<
+ *     def changeBus(self, unsigned char bus):
+ *         self.b_relay.changeBus(bus)             # <<<<<<<<<<<<<<
  */
-  __pyx_v_self->c_relay.changeBus(__pyx_v_bus);
+  __pyx_v_self->b_relay.changeBus(__pyx_v_bus);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":126
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":128
  *         return self.c_relay.getStateWDT()
  * 
- *     def changeBus(self, char *bus):             # <<<<<<<<<<<<<<
- *         self.c_relay.changeBus(bus)
+ *     def changeBus(self, unsigned char bus):             # <<<<<<<<<<<<<<
+ *         self.b_relay.changeBus(bus)
  */
 
   /* function exit code */
@@ -3321,6 +3324,7 @@ static PyObject *__pyx_tp_new_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArdui
   if (unlikely(!o)) return 0;
   p = ((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)o);
   new((void*)&(p->c_relay)) iarduino_I2C_Relay();
+  new((void*)&(p->b_relay)) iarduino_I2C();
   if (unlikely(__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_1__cinit__(o, a, k) < 0)) goto bad;
   return o;
   bad:
@@ -3336,6 +3340,7 @@ static void __pyx_tp_dealloc_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduin
   }
   #endif
   __Pyx_call_destructor(p->c_relay);
+  __Pyx_call_destructor(p->b_relay);
   (*Py_TYPE(o)->tp_free)(o);
 }
 
@@ -3640,15 +3645,15 @@ static int __Pyx_modinit_type_init_code(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay) < 0) __PYX_ERR(1, 46, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay) < 0) __PYX_ERR(1, 47, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay.tp_print = 0;
   #endif
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay.tp_dictoffset && __pyx_type_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay.tp_getattro == PyObject_GenericGetAttr)) {
     __pyx_type_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_pyiArduinoI2Crelay, (PyObject *)&__pyx_type_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay) < 0) __PYX_ERR(1, 46, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay) < 0) __PYX_ERR(1, 46, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_pyiArduinoI2Crelay, (PyObject *)&__pyx_type_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay) < 0) __PYX_ERR(1, 47, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay) < 0) __PYX_ERR(1, 47, __pyx_L1_error)
   __pyx_ptype_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay = &__pyx_type_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay;
   __Pyx_RefNannyFinishContext();
   return 0;

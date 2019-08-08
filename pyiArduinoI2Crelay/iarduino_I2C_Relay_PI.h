@@ -21,7 +21,7 @@ class iarduino_I2C_BASE{                                                        
                 virtual bool writeBytes(uint8_t, uint8_t*, uint8_t){return 0;};                 //  Аргументы: адрес_модуля, указатель_на_массив, количество_байт. (функция отличается тем, что после отправки адреса модуля она сразу начинает цикл отправки данных, без передачи адреса первого регистра.)
 //  ДОПОЛНИТЕЛЬНЫЕ ФУНКЦИИ:                                                                     //
                 virtual bool checkAddress(uint8_t){return 0;};                                  //  Аргументы: адрес_модуля.
-                virtual void changeBus(char*){};                                                //
+                virtual void changeBus(uint8_t){};                                              //
 };                                                                                              //
                                                                                                 //
 class iarduino_I2C: public iarduino_I2C_BASE{                                                   //  Определяем производный класс
@@ -120,11 +120,11 @@ class iarduino_I2C: public iarduino_I2C_BASE{                                   
                         else return true;
                 }
 
-                void changeBus(char* bus){
-                        this->filename = bus;
+                void changeBus(uint8_t bus){
+                        this->filename = (char*)"/dev/i2c-" + bus;
                 }
-        private:                                                                                                                                                //
+        private:
                 char *filename = (char*)"/dev/i2c-1";
                 int file_i2c;
-};                                                                                                                                                                      //
-#endif                                                                                                                                                          //
+};
+#endif
