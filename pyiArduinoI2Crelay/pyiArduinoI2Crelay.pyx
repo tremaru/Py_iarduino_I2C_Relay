@@ -92,11 +92,14 @@ cdef class pyiArduinoI2Crelay:
     def freqPWM(self, unsigned short frequency):
         self.c_relay.freqPWM(frequency)
 
-    def currentWrite(self, unsigned char channel, float current):
-        self.c_relay.currentWrite(channel, current)
+#   def currentWrite(self, unsigned char channel, float current):
+#       self.c_relay.currentWrite(channel, current)
 
-    def currentWrite(self, unsigned char channel, float current,unsigned char& Rsh):
-        self.c_relay.currentWrite(channel, current, Rsh)
+    def currentWrite(self, unsigned char channel, float current, Rsh=None):
+        if Rsh is not None:
+            self.c_relay.currentWrite(channel, current, Rsh)
+        else:
+            self.c_relay.currentWrite(channel, current)
 
     def currentRead(self,unsigned char channel):
         return self.c_relay.currentRead(channel)

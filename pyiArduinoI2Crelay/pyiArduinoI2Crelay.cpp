@@ -1288,20 +1288,19 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
 static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_20analogRead(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel); /* proto */
 static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_22analogAveraging(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_coefficient); /* proto */
 static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_24freqPWM(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned short __pyx_v_frequency); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_26currentWrite(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel, float __pyx_v_current); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_28currentWrite(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel, float __pyx_v_current, unsigned char __pyx_v_Rsh); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_30currentRead(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_32setCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel, float __pyx_v_current, unsigned char __pyx_v_rtype); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_34getCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_36delCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_38resCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_40enableWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_time); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_42disableWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_44resetWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_46getStateWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_48changeBus(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_bus); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_50__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_52__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_26currentWrite(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel, float __pyx_v_current, PyObject *__pyx_v_Rsh); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_28currentRead(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_30setCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel, float __pyx_v_current, unsigned char __pyx_v_rtype); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_32getCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_34delCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_36resCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_38enableWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_time); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_40disableWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_42resetWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_44getStateWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_46changeBus(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_bus); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_48__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_50__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
@@ -2305,7 +2304,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def freqPWM(self, unsigned short frequency):
  *         self.c_relay.freqPWM(frequency)             # <<<<<<<<<<<<<<
  * 
- *     def currentWrite(self, unsigned char channel, float current):
+ * #   def currentWrite(self, unsigned char channel, float current):
  */
   __pyx_v_self->c_relay.freqPWM(__pyx_v_frequency);
 
@@ -2324,12 +2323,12 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":95
- *         self.c_relay.freqPWM(frequency)
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":98
+ * #       self.c_relay.currentWrite(channel, current)
  * 
- *     def currentWrite(self, unsigned char channel, float current):             # <<<<<<<<<<<<<<
- *         self.c_relay.currentWrite(channel, current)
- * 
+ *     def currentWrite(self, unsigned char channel, float current, Rsh=None):             # <<<<<<<<<<<<<<
+ *         if Rsh is not None:
+ *             self.c_relay.currentWrite(channel, current, Rsh)
  */
 
 /* Python wrapper */
@@ -2337,111 +2336,14 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
 static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_27currentWrite(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   unsigned char __pyx_v_channel;
   float __pyx_v_current;
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("currentWrite (wrapper)", 0);
-  {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_channel,&__pyx_n_s_current,0};
-    PyObject* values[2] = {0,0};
-    if (unlikely(__pyx_kwds)) {
-      Py_ssize_t kw_args;
-      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
-      switch (pos_args) {
-        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
-        CYTHON_FALLTHROUGH;
-        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
-        CYTHON_FALLTHROUGH;
-        case  0: break;
-        default: goto __pyx_L5_argtuple_error;
-      }
-      kw_args = PyDict_Size(__pyx_kwds);
-      switch (pos_args) {
-        case  0:
-        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_channel)) != 0)) kw_args--;
-        else goto __pyx_L5_argtuple_error;
-        CYTHON_FALLTHROUGH;
-        case  1:
-        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_current)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 2, 2, 1); __PYX_ERR(1, 95, __pyx_L3_error)
-        }
-      }
-      if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "currentWrite") < 0)) __PYX_ERR(1, 95, __pyx_L3_error)
-      }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
-      goto __pyx_L5_argtuple_error;
-    } else {
-      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
-      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
-    }
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 95, __pyx_L3_error)
-    __pyx_v_current = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_current == (float)-1) && PyErr_Occurred())) __PYX_ERR(1, 95, __pyx_L3_error)
-  }
-  goto __pyx_L4_argument_unpacking_done;
-  __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 95, __pyx_L3_error)
-  __pyx_L3_error:;
-  __Pyx_AddTraceback("pyiArduinoI2Crelay.pyiArduinoI2Crelay.pyiArduinoI2Crelay.currentWrite", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __Pyx_RefNannyFinishContext();
-  return NULL;
-  __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_26currentWrite(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), __pyx_v_channel, __pyx_v_current);
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_26currentWrite(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel, float __pyx_v_current) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("currentWrite", 0);
-
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":96
- * 
- *     def currentWrite(self, unsigned char channel, float current):
- *         self.c_relay.currentWrite(channel, current)             # <<<<<<<<<<<<<<
- * 
- *     def currentWrite(self, unsigned char channel, float current,unsigned char& Rsh):
- */
-  __pyx_v_self->c_relay.currentWrite(__pyx_v_channel, __pyx_v_current);
-
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":95
- *         self.c_relay.freqPWM(frequency)
- * 
- *     def currentWrite(self, unsigned char channel, float current):             # <<<<<<<<<<<<<<
- *         self.c_relay.currentWrite(channel, current)
- * 
- */
-
-  /* function exit code */
-  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":98
- *         self.c_relay.currentWrite(channel, current)
- * 
- *     def currentWrite(self, unsigned char channel, float current,unsigned char& Rsh):             # <<<<<<<<<<<<<<
- *         self.c_relay.currentWrite(channel, current, Rsh)
- * 
- */
-
-/* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_29currentWrite(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_29currentWrite(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  unsigned char __pyx_v_channel;
-  float __pyx_v_current;
-  unsigned char __pyx_v_Rsh;
+  PyObject *__pyx_v_Rsh = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("currentWrite (wrapper)", 0);
   {
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_channel,&__pyx_n_s_current,&__pyx_n_s_Rsh,0};
     PyObject* values[3] = {0,0,0};
+    values[2] = ((PyObject *)Py_None);
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
@@ -2464,75 +2366,120 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_current)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 3, 3, 1); __PYX_ERR(1, 98, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("currentWrite", 0, 2, 3, 1); __PYX_ERR(1, 98, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_Rsh)) != 0)) kw_args--;
-        else {
-          __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 3, 3, 2); __PYX_ERR(1, 98, __pyx_L3_error)
+        if (kw_args > 0) {
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_Rsh);
+          if (value) { values[2] = value; kw_args--; }
         }
       }
       if (unlikely(kw_args > 0)) {
         if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "currentWrite") < 0)) __PYX_ERR(1, 98, __pyx_L3_error)
       }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
-      goto __pyx_L5_argtuple_error;
     } else {
-      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
-      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
-      values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+      switch (PyTuple_GET_SIZE(__pyx_args)) {
+        case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+        CYTHON_FALLTHROUGH;
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        break;
+        default: goto __pyx_L5_argtuple_error;
+      }
     }
     __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 98, __pyx_L3_error)
     __pyx_v_current = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_current == (float)-1) && PyErr_Occurred())) __PYX_ERR(1, 98, __pyx_L3_error)
-    __pyx_v_Rsh = __Pyx_PyInt_As_unsigned_char(values[2]); if (unlikely((__pyx_v_Rsh == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 98, __pyx_L3_error)
+    __pyx_v_Rsh = values[2];
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("currentWrite", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 98, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("currentWrite", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 98, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("pyiArduinoI2Crelay.pyiArduinoI2Crelay.pyiArduinoI2Crelay.currentWrite", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_28currentWrite(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), __pyx_v_channel, __pyx_v_current, __pyx_v_Rsh);
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_26currentWrite(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), __pyx_v_channel, __pyx_v_current, __pyx_v_Rsh);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_28currentWrite(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel, float __pyx_v_current, unsigned char __pyx_v_Rsh) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_26currentWrite(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel, float __pyx_v_current, PyObject *__pyx_v_Rsh) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
+  int __pyx_t_1;
+  int __pyx_t_2;
+  unsigned char __pyx_t_3;
   __Pyx_RefNannySetupContext("currentWrite", 0);
 
   /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":99
  * 
- *     def currentWrite(self, unsigned char channel, float current,unsigned char& Rsh):
- *         self.c_relay.currentWrite(channel, current, Rsh)             # <<<<<<<<<<<<<<
+ *     def currentWrite(self, unsigned char channel, float current, Rsh=None):
+ *         if Rsh is not None:             # <<<<<<<<<<<<<<
+ *             self.c_relay.currentWrite(channel, current, Rsh)
+ *         else:
+ */
+  __pyx_t_1 = (__pyx_v_Rsh != Py_None);
+  __pyx_t_2 = (__pyx_t_1 != 0);
+  if (__pyx_t_2) {
+
+    /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":100
+ *     def currentWrite(self, unsigned char channel, float current, Rsh=None):
+ *         if Rsh is not None:
+ *             self.c_relay.currentWrite(channel, current, Rsh)             # <<<<<<<<<<<<<<
+ *         else:
+ *             self.c_relay.currentWrite(channel, current)
+ */
+    __pyx_t_3 = __Pyx_PyInt_As_unsigned_char(__pyx_v_Rsh); if (unlikely((__pyx_t_3 == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 100, __pyx_L1_error)
+    __pyx_v_self->c_relay.currentWrite(__pyx_v_channel, __pyx_v_current, __pyx_t_3);
+
+    /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":99
+ * 
+ *     def currentWrite(self, unsigned char channel, float current, Rsh=None):
+ *         if Rsh is not None:             # <<<<<<<<<<<<<<
+ *             self.c_relay.currentWrite(channel, current, Rsh)
+ *         else:
+ */
+    goto __pyx_L3;
+  }
+
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":102
+ *             self.c_relay.currentWrite(channel, current, Rsh)
+ *         else:
+ *             self.c_relay.currentWrite(channel, current)             # <<<<<<<<<<<<<<
  * 
  *     def currentRead(self,unsigned char channel):
  */
-  __pyx_v_self->c_relay.currentWrite(__pyx_v_channel, __pyx_v_current, __pyx_v_Rsh);
+  /*else*/ {
+    __pyx_v_self->c_relay.currentWrite(__pyx_v_channel, __pyx_v_current);
+  }
+  __pyx_L3:;
 
   /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":98
- *         self.c_relay.currentWrite(channel, current)
+ * #       self.c_relay.currentWrite(channel, current)
  * 
- *     def currentWrite(self, unsigned char channel, float current,unsigned char& Rsh):             # <<<<<<<<<<<<<<
- *         self.c_relay.currentWrite(channel, current, Rsh)
- * 
+ *     def currentWrite(self, unsigned char channel, float current, Rsh=None):             # <<<<<<<<<<<<<<
+ *         if Rsh is not None:
+ *             self.c_relay.currentWrite(channel, current, Rsh)
  */
 
   /* function exit code */
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("pyiArduinoI2Crelay.pyiArduinoI2Crelay.pyiArduinoI2Crelay.currentWrite", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":101
- *         self.c_relay.currentWrite(channel, current, Rsh)
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":104
+ *             self.c_relay.currentWrite(channel, current)
  * 
  *     def currentRead(self,unsigned char channel):             # <<<<<<<<<<<<<<
  *         return self.c_relay.currentRead(channel)
@@ -2540,14 +2487,14 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_31currentRead(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_31currentRead(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel) {
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_29currentRead(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel); /*proto*/
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_29currentRead(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel) {
   unsigned char __pyx_v_channel;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("currentRead (wrapper)", 0);
   assert(__pyx_arg_channel); {
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 101, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 104, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2555,20 +2502,20 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_30currentRead(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_channel));
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_28currentRead(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_channel));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_30currentRead(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_28currentRead(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("currentRead", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":102
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":105
  * 
  *     def currentRead(self,unsigned char channel):
  *         return self.c_relay.currentRead(channel)             # <<<<<<<<<<<<<<
@@ -2576,14 +2523,14 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def setCurrentProtection(self, unsigned char channel, float current, unsigned char rtype):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->c_relay.currentRead(__pyx_v_channel)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 102, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->c_relay.currentRead(__pyx_v_channel)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":101
- *         self.c_relay.currentWrite(channel, current, Rsh)
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":104
+ *             self.c_relay.currentWrite(channel, current)
  * 
  *     def currentRead(self,unsigned char channel):             # <<<<<<<<<<<<<<
  *         return self.c_relay.currentRead(channel)
@@ -2601,7 +2548,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":104
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":107
  *         return self.c_relay.currentRead(channel)
  * 
  *     def setCurrentProtection(self, unsigned char channel, float current, unsigned char rtype):             # <<<<<<<<<<<<<<
@@ -2610,8 +2557,8 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_33setCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_33setCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_31setCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_31setCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   unsigned char __pyx_v_channel;
   float __pyx_v_current;
   unsigned char __pyx_v_rtype;
@@ -2643,17 +2590,17 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_current)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("setCurrentProtection", 1, 3, 3, 1); __PYX_ERR(1, 104, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setCurrentProtection", 1, 3, 3, 1); __PYX_ERR(1, 107, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_rtype)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("setCurrentProtection", 1, 3, 3, 2); __PYX_ERR(1, 104, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("setCurrentProtection", 1, 3, 3, 2); __PYX_ERR(1, 107, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "setCurrentProtection") < 0)) __PYX_ERR(1, 104, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "setCurrentProtection") < 0)) __PYX_ERR(1, 107, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -2662,31 +2609,31 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 104, __pyx_L3_error)
-    __pyx_v_current = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_current == (float)-1) && PyErr_Occurred())) __PYX_ERR(1, 104, __pyx_L3_error)
-    __pyx_v_rtype = __Pyx_PyInt_As_unsigned_char(values[2]); if (unlikely((__pyx_v_rtype == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 104, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(values[0]); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 107, __pyx_L3_error)
+    __pyx_v_current = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_current == (float)-1) && PyErr_Occurred())) __PYX_ERR(1, 107, __pyx_L3_error)
+    __pyx_v_rtype = __Pyx_PyInt_As_unsigned_char(values[2]); if (unlikely((__pyx_v_rtype == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 107, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("setCurrentProtection", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 104, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("setCurrentProtection", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 107, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("pyiArduinoI2Crelay.pyiArduinoI2Crelay.pyiArduinoI2Crelay.setCurrentProtection", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_32setCurrentProtection(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), __pyx_v_channel, __pyx_v_current, __pyx_v_rtype);
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_30setCurrentProtection(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), __pyx_v_channel, __pyx_v_current, __pyx_v_rtype);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_32setCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel, float __pyx_v_current, unsigned char __pyx_v_rtype) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_30setCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel, float __pyx_v_current, unsigned char __pyx_v_rtype) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("setCurrentProtection", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":105
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":108
  * 
  *     def setCurrentProtection(self, unsigned char channel, float current, unsigned char rtype):
  *         self.c_relay.setCurrentProtection(channel, current, rtype)             # <<<<<<<<<<<<<<
@@ -2695,7 +2642,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
   __pyx_v_self->c_relay.setCurrentProtection(__pyx_v_channel, __pyx_v_current, __pyx_v_rtype);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":104
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":107
  *         return self.c_relay.currentRead(channel)
  * 
  *     def setCurrentProtection(self, unsigned char channel, float current, unsigned char rtype):             # <<<<<<<<<<<<<<
@@ -2710,7 +2657,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":107
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":110
  *         self.c_relay.setCurrentProtection(channel, current, rtype)
  * 
  *     def getCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2719,14 +2666,14 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_35getCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_35getCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel) {
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_33getCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel); /*proto*/
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_33getCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel) {
   unsigned char __pyx_v_channel;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getCurrentProtection (wrapper)", 0);
   assert(__pyx_arg_channel); {
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 107, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 110, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2734,20 +2681,20 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_34getCurrentProtection(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_channel));
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_32getCurrentProtection(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_channel));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_34getCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_32getCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("getCurrentProtection", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":108
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":111
  * 
  *     def getCurrentProtection(self, unsigned char channel):
  *         return self.c_relay.getCurrentProtection(channel)             # <<<<<<<<<<<<<<
@@ -2755,13 +2702,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def delCurrentProtection(self, unsigned char channel):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.getCurrentProtection(__pyx_v_channel)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 108, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.getCurrentProtection(__pyx_v_channel)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 111, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":107
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":110
  *         self.c_relay.setCurrentProtection(channel, current, rtype)
  * 
  *     def getCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2780,7 +2727,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":110
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":113
  *         return self.c_relay.getCurrentProtection(channel)
  * 
  *     def delCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
@@ -2789,14 +2736,14 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_37delCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_37delCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel) {
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_35delCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel); /*proto*/
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_35delCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel) {
   unsigned char __pyx_v_channel;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("delCurrentProtection (wrapper)", 0);
   assert(__pyx_arg_channel); {
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 110, __pyx_L3_error)
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 113, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2804,19 +2751,19 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_36delCurrentProtection(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_channel));
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_34delCurrentProtection(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_channel));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_36delCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_34delCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("delCurrentProtection", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":111
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":114
  * 
  *     def delCurrentProtection(self, unsigned char channel):
  *         self.c_relay.delCurrentProtection(channel)             # <<<<<<<<<<<<<<
@@ -2825,71 +2772,11 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
   __pyx_v_self->c_relay.delCurrentProtection(__pyx_v_channel);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":110
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":113
  *         return self.c_relay.getCurrentProtection(channel)
  * 
  *     def delCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
  *         self.c_relay.delCurrentProtection(channel)
- * 
- */
-
-  /* function exit code */
-  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":113
- *         self.c_relay.delCurrentProtection(channel)
- * 
- *     def resCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
- *         self.c_relay.resCurrentProtection(channel)
- * 
- */
-
-/* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_39resCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_39resCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel) {
-  unsigned char __pyx_v_channel;
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("resCurrentProtection (wrapper)", 0);
-  assert(__pyx_arg_channel); {
-    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 113, __pyx_L3_error)
-  }
-  goto __pyx_L4_argument_unpacking_done;
-  __pyx_L3_error:;
-  __Pyx_AddTraceback("pyiArduinoI2Crelay.pyiArduinoI2Crelay.pyiArduinoI2Crelay.resCurrentProtection", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __Pyx_RefNannyFinishContext();
-  return NULL;
-  __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_38resCurrentProtection(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_channel));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_38resCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("resCurrentProtection", 0);
-
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":114
- * 
- *     def resCurrentProtection(self, unsigned char channel):
- *         self.c_relay.resCurrentProtection(channel)             # <<<<<<<<<<<<<<
- * 
- *     def enableWDT(self, unsigned char time):
- */
-  __pyx_v_self->c_relay.resCurrentProtection(__pyx_v_channel);
-
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":113
- *         self.c_relay.delCurrentProtection(channel)
- * 
- *     def resCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
- *         self.c_relay.resCurrentProtection(channel)
  * 
  */
 
@@ -2901,6 +2788,66 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
 }
 
 /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":116
+ *         self.c_relay.delCurrentProtection(channel)
+ * 
+ *     def resCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
+ *         self.c_relay.resCurrentProtection(channel)
+ * 
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_37resCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel); /*proto*/
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_37resCurrentProtection(PyObject *__pyx_v_self, PyObject *__pyx_arg_channel) {
+  unsigned char __pyx_v_channel;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("resCurrentProtection (wrapper)", 0);
+  assert(__pyx_arg_channel); {
+    __pyx_v_channel = __Pyx_PyInt_As_unsigned_char(__pyx_arg_channel); if (unlikely((__pyx_v_channel == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 116, __pyx_L3_error)
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("pyiArduinoI2Crelay.pyiArduinoI2Crelay.pyiArduinoI2Crelay.resCurrentProtection", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_36resCurrentProtection(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_channel));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_36resCurrentProtection(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_channel) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("resCurrentProtection", 0);
+
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":117
+ * 
+ *     def resCurrentProtection(self, unsigned char channel):
+ *         self.c_relay.resCurrentProtection(channel)             # <<<<<<<<<<<<<<
+ * 
+ *     def enableWDT(self, unsigned char time):
+ */
+  __pyx_v_self->c_relay.resCurrentProtection(__pyx_v_channel);
+
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":116
+ *         self.c_relay.delCurrentProtection(channel)
+ * 
+ *     def resCurrentProtection(self, unsigned char channel):             # <<<<<<<<<<<<<<
+ *         self.c_relay.resCurrentProtection(channel)
+ * 
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":119
  *         self.c_relay.resCurrentProtection(channel)
  * 
  *     def enableWDT(self, unsigned char time):             # <<<<<<<<<<<<<<
@@ -2909,14 +2856,14 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_41enableWDT(PyObject *__pyx_v_self, PyObject *__pyx_arg_time); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_41enableWDT(PyObject *__pyx_v_self, PyObject *__pyx_arg_time) {
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_39enableWDT(PyObject *__pyx_v_self, PyObject *__pyx_arg_time); /*proto*/
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_39enableWDT(PyObject *__pyx_v_self, PyObject *__pyx_arg_time) {
   unsigned char __pyx_v_time;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("enableWDT (wrapper)", 0);
   assert(__pyx_arg_time); {
-    __pyx_v_time = __Pyx_PyInt_As_unsigned_char(__pyx_arg_time); if (unlikely((__pyx_v_time == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 116, __pyx_L3_error)
+    __pyx_v_time = __Pyx_PyInt_As_unsigned_char(__pyx_arg_time); if (unlikely((__pyx_v_time == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 119, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2924,20 +2871,20 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_40enableWDT(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_time));
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_38enableWDT(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_time));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_40enableWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_time) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_38enableWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_time) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("enableWDT", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":117
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":120
  * 
  *     def enableWDT(self, unsigned char time):
  *         return self.c_relay.enableWDT(time)             # <<<<<<<<<<<<<<
@@ -2945,13 +2892,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def disableWDT(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.enableWDT(__pyx_v_time)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 117, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.enableWDT(__pyx_v_time)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":116
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":119
  *         self.c_relay.resCurrentProtection(channel)
  * 
  *     def enableWDT(self, unsigned char time):             # <<<<<<<<<<<<<<
@@ -2970,7 +2917,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":119
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":122
  *         return self.c_relay.enableWDT(time)
  * 
  *     def disableWDT(self):             # <<<<<<<<<<<<<<
@@ -2979,25 +2926,25 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_43disableWDT(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_43disableWDT(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_41disableWDT(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_41disableWDT(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("disableWDT (wrapper)", 0);
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_42disableWDT(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self));
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_40disableWDT(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_42disableWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_40disableWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("disableWDT", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":120
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":123
  * 
  *     def disableWDT(self):
  *         return self.c_relay.disableWDT()             # <<<<<<<<<<<<<<
@@ -3005,13 +2952,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def resetWDT(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.disableWDT()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 120, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.disableWDT()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 123, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":119
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":122
  *         return self.c_relay.enableWDT(time)
  * 
  *     def disableWDT(self):             # <<<<<<<<<<<<<<
@@ -3030,7 +2977,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":122
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":125
  *         return self.c_relay.disableWDT()
  * 
  *     def resetWDT(self):             # <<<<<<<<<<<<<<
@@ -3039,25 +2986,25 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_45resetWDT(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_45resetWDT(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_43resetWDT(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_43resetWDT(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("resetWDT (wrapper)", 0);
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_44resetWDT(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self));
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_42resetWDT(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_44resetWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_42resetWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("resetWDT", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":123
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":126
  * 
  *     def resetWDT(self):
  *         return self.c_relay.resetWDT()             # <<<<<<<<<<<<<<
@@ -3065,13 +3012,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def getStateWDT(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.resetWDT()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 123, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.resetWDT()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":122
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":125
  *         return self.c_relay.disableWDT()
  * 
  *     def resetWDT(self):             # <<<<<<<<<<<<<<
@@ -3090,7 +3037,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":125
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":128
  *         return self.c_relay.resetWDT()
  * 
  *     def getStateWDT(self):             # <<<<<<<<<<<<<<
@@ -3099,25 +3046,25 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_47getStateWDT(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_47getStateWDT(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_45getStateWDT(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_45getStateWDT(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getStateWDT (wrapper)", 0);
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_46getStateWDT(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self));
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_44getStateWDT(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_46getStateWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_44getStateWDT(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("getStateWDT", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":126
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":129
  * 
  *     def getStateWDT(self):
  *         return self.c_relay.getStateWDT()             # <<<<<<<<<<<<<<
@@ -3125,13 +3072,13 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  *     def changeBus(self, unsigned char bus):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.getStateWDT()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 126, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_self->c_relay.getStateWDT()); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 129, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":125
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":128
  *         return self.c_relay.resetWDT()
  * 
  *     def getStateWDT(self):             # <<<<<<<<<<<<<<
@@ -3150,7 +3097,7 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   return __pyx_r;
 }
 
-/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":128
+/* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":131
  *         return self.c_relay.getStateWDT()
  * 
  *     def changeBus(self, unsigned char bus):             # <<<<<<<<<<<<<<
@@ -3158,14 +3105,14 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_49changeBus(PyObject *__pyx_v_self, PyObject *__pyx_arg_bus); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_49changeBus(PyObject *__pyx_v_self, PyObject *__pyx_arg_bus) {
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_47changeBus(PyObject *__pyx_v_self, PyObject *__pyx_arg_bus); /*proto*/
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_47changeBus(PyObject *__pyx_v_self, PyObject *__pyx_arg_bus) {
   unsigned char __pyx_v_bus;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("changeBus (wrapper)", 0);
   assert(__pyx_arg_bus); {
-    __pyx_v_bus = __Pyx_PyInt_As_unsigned_char(__pyx_arg_bus); if (unlikely((__pyx_v_bus == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 128, __pyx_L3_error)
+    __pyx_v_bus = __Pyx_PyInt_As_unsigned_char(__pyx_arg_bus); if (unlikely((__pyx_v_bus == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(1, 131, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -3173,26 +3120,26 @@ static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_48changeBus(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_bus));
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_46changeBus(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((unsigned char)__pyx_v_bus));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_48changeBus(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_bus) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_46changeBus(struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, unsigned char __pyx_v_bus) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("changeBus", 0);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":129
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":132
  * 
  *     def changeBus(self, unsigned char bus):
  *         self.b_relay.changeBus(bus)             # <<<<<<<<<<<<<<
  */
   __pyx_v_self->b_relay.changeBus(__pyx_v_bus);
 
-  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":128
+  /* "pyiArduinoI2Crelay/pyiArduinoI2Crelay.pyx":131
  *         return self.c_relay.getStateWDT()
  * 
  *     def changeBus(self, unsigned char bus):             # <<<<<<<<<<<<<<
@@ -3213,19 +3160,19 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_51__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_51__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_49__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_49__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_50__reduce_cython__(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self));
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_48__reduce_cython__(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_50__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_48__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3267,19 +3214,19 @@ static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduino
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_53__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_53__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_51__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_51__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_52__setstate_cython__(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_50__setstate_cython__(((struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_52__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_50__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiArduinoI2Crelay *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3358,19 +3305,18 @@ static PyMethodDef __pyx_methods_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_pyiAr
   {"analogAveraging", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_23analogAveraging, METH_O, 0},
   {"freqPWM", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_25freqPWM, METH_O, 0},
   {"currentWrite", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_27currentWrite, METH_VARARGS|METH_KEYWORDS, 0},
-  {"currentWrite", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_29currentWrite, METH_VARARGS|METH_KEYWORDS, 0},
-  {"currentRead", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_31currentRead, METH_O, 0},
-  {"setCurrentProtection", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_33setCurrentProtection, METH_VARARGS|METH_KEYWORDS, 0},
-  {"getCurrentProtection", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_35getCurrentProtection, METH_O, 0},
-  {"delCurrentProtection", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_37delCurrentProtection, METH_O, 0},
-  {"resCurrentProtection", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_39resCurrentProtection, METH_O, 0},
-  {"enableWDT", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_41enableWDT, METH_O, 0},
-  {"disableWDT", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_43disableWDT, METH_NOARGS, 0},
-  {"resetWDT", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_45resetWDT, METH_NOARGS, 0},
-  {"getStateWDT", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_47getStateWDT, METH_NOARGS, 0},
-  {"changeBus", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_49changeBus, METH_O, 0},
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_51__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_53__setstate_cython__, METH_O, 0},
+  {"currentRead", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_29currentRead, METH_O, 0},
+  {"setCurrentProtection", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_31setCurrentProtection, METH_VARARGS|METH_KEYWORDS, 0},
+  {"getCurrentProtection", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_33getCurrentProtection, METH_O, 0},
+  {"delCurrentProtection", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_35delCurrentProtection, METH_O, 0},
+  {"resCurrentProtection", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_37resCurrentProtection, METH_O, 0},
+  {"enableWDT", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_39enableWDT, METH_O, 0},
+  {"disableWDT", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_41disableWDT, METH_NOARGS, 0},
+  {"resetWDT", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_43resetWDT, METH_NOARGS, 0},
+  {"getStateWDT", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_45getStateWDT, METH_NOARGS, 0},
+  {"changeBus", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_47changeBus, METH_O, 0},
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_49__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_18pyiArduinoI2Crelay_51__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
