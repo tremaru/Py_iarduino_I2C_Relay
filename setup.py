@@ -5,7 +5,7 @@ with open("README.md", "r") as readme:
     long_description = readme.read()
 
 setup(name='pyiArduinoI2Crelay',
-    version='1.6.7',
+    version='1.6.8',
     description='iarduino.ru module for Raspberry Pi',
     long_description=long_description,
     long_description_content_type="text/markdown",
