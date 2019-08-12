@@ -1,1 +1,1 @@
-rm -r dist/ build/
+rm -r dist/ build/ MANIFEST
