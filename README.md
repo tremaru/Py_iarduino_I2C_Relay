@@ -17,7 +17,7 @@
 
 **Самостоятельная сборка из исходников:**
 
-`git clone https://github.com/tremaru/pyiArduinoI2Crelay.git && cd pyiArduinoI2Cexpander/pyiArduinoI2Cexpander && python3 setup.py build_ext --inplace`
+`git clone https://github.com/tremaru/pyiArduinoI2Crelay.git && cd pyiArduinoI2Crelay/pyiArduinoI2Crelay && python3 setup.py build_ext --inplace`
 
 Примеры для Python находятся в папке `pyiArduinoI2Crelay/examples`
 
