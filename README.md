@@ -13,5 +13,5 @@
 |--|--|
 | Модуль электромеханических реле, 2 канала <img src="https://wiki.iarduino.ru/img/resources/1157/1157.svg" width="150px"></img> | https://iarduino.ru/shop/Expansion-payments/rele-2ch-i2c.html |
 | Модуль твердотельных реле, 4 канала <img src="https://wiki.iarduino.ru/img/resources/1158/1158.svg" width="150px"></img> | https://iarduino.ru/shop/Expansion-payments/solid-rele-4ch-i2c.html |
-|  |  |
+| Скоро здесь бутут силовые ключи |  |
 
