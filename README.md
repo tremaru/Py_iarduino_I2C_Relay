@@ -6,3 +6,12 @@
 
 
 **This is a Python3 module for Raspberry Pi, board rev2 (made after 2012). It can control solid state relays, mechanical relays and power mosfet modules made by iarduino.ru via I2C bus.**
+
+> Подробнее про модули читайте на нашей [wiki](https://wiki.iarduino.ru)
+
+| Модель | Ссылка на магазин |
+|--|--|
+| Модуль электромеханических реле, 2 канала <img src="https://wiki.iarduino.ru/img/resources/1157/1157.svg" width="50px"></img> | https://iarduino.ru/shop/Expansion-payments/rele-2ch-i2c.html |
+| Модуль твердотельных реле, 4 канала ![test](https://wiki.iarduino.ru/img/resources/1158/1158.svg) | https://iarduino.ru/shop/Expansion-payments/solid-rele-4ch-i2c.html |
+|  |  |
+
