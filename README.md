@@ -9,6 +9,19 @@
 
 > Подробнее про модули читайте на нашей [wiki](https://wiki.iarduino.ru)
 
+> Подробнее про [библоитеку](https://iarduino.ru/file/514.html)
+
+**Установка из репозиториев PyPI в терминале Raspberry:**
+
+`sudo pip3 install pyiArduinoI2Cexpander`
+
+**Самостоятельная сборка из исходников:**
+
+`git clone https://github.com/tremaru/pyiArduinoI2Cexpander.git && cd pyiArduinoI2Cexpander/pyiArduinoI2Cexpander && python3 setup.py build_ext --inplace`
+
+Примеры для Python находятся в папке `pyiArduinoI2Cexpander/examples`
+
+
 | Модель | Подключение к Raspberry| Ссылка на магазин |
 |--|--|--|
 | Модуль электромеханических реле, 2 канала <img src="https://wiki.iarduino.ru/img/resources/1157/1157.svg" width="150px"></img>| [ссылка на wiki](https://wiki.iarduino.ru/page/rele-2ch-i2c-raspberry/) | https://iarduino.ru/shop/Expansion-payments/rele-2ch-i2c.html |
