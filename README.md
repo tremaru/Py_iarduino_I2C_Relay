@@ -22,6 +22,15 @@
 Примеры для Python находятся в папке `pyiArduinoI2Crelay/examples`
 
 
+Примеры для С++ находятся в папке `pyiArduinoI2Crelay/cpp`. Так же в этой папке лежит *Makefile* для сборки
+из исходников. Можно собрать сразу все примеры командой:
+`make all` или `make`
+Для сборки конкретного примера: `make "название примера"`
+Например:
+`make reset`
+Для удаления собранных исполняемых файлов:
+`make clean`
+
 | Модель | Подключение к Raspberry| Ссылка на магазин |
 |--|--|--|
 | Модуль электромеханических реле, 2 канала <img src="https://wiki.iarduino.ru/img/resources/1157/1157.svg" width="150px"></img>| [ссылка на wiki](https://wiki.iarduino.ru/page/rele-2ch-i2c-raspberry/) | https://iarduino.ru/shop/Expansion-payments/rele-2ch-i2c.html |
