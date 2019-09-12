@@ -5,12 +5,12 @@
 
 from time import sleep 
 from pyiArduinoI2Crelay import *
-pwrkey = pyiArduinoI2Crelay(0x09)
+pwrfet = pyiArduinoI2Crelay(0x09)
 
 k=4  # Номер канала для которого выполняется калибровка
 
 #   Включаем канал «k» модуля.
-pwrkey.digitalWrite(k, HIGH)
+pwrfet.digitalWrite(k, HIGH)
 #   Выводим подсказку:
 print("Для калибровки подключите нагрузку к каналу «"+str(k)+"»"
       "последовательно с амперметром. Желательно (но не обязательно) "
@@ -26,12 +26,12 @@ except ValueError:                     #  Если введено что-то д
           "ты должен...")              #  в stdout 
 else:                                  #  Если всё же введены цифры
     val /= 1000                        #  Преобразуем силу тока «а» из мА в А и выполняем калибровку 
-    pwrkey.currentWrite(k, a)          #  канала «k» функцией currentWrite() указав реально измеренную силу тока «a». 
+    pwrfet.currentWrite(k, a)          #  канала «k» функцией currentWrite() указав реально измеренную силу тока «a». 
     print("Rш пересчитано по току в "  #  
           +str(val)+"А.")              #  Функция currentWrite() сохраняет значение Rш в энергонезависимую память модуля.
                                        #  Значит результаты калибровки сохранятся и после отключения питания.
 while True:                            # 
     print("Сила тока %.2f"             #  Выводим силу тока измеренную модулем на канале «k» в stdout.
-          % pwrkey.currentRead(k)      #
+          % pwrfet.currentRead(k)      #
           + "А.", end="\r")            #   
     sleep(.1)                          #

@@ -2,21 +2,21 @@
                                     # * Строки со звёздочкой являются необязательными.
 from pyiArduinoI2Crelay import *    # Подключаем модуль для работы с ключём
 from time import sleep              # Подключаем функцию ожидания из модуля времени
-pwrkey = pyiArduinoI2Crelay(0x09)   # Объявляем объект pwrkey
+pwrfet = pyiArduinoI2Crelay(0x09)   # Объявляем объект pwrfet
 i = 0                               #
                                     #
-pwrkey.digitalWrite(ALL_CHANNEL,LOW)# * Выключаем все каналы модуля.
+pwrfet.digitalWrite(ALL_CHANNEL,LOW)# * Выключаем все каналы модуля.
                                     #
 while True:                         #
 #  Управляем каналом N 3:
     if i==0:                        # Если в переменной хранится значение 0
-        pwrkey.digitalWrite(4,HIGH) # включаем 3 канал
+        pwrfet.digitalWrite(4,HIGH) # включаем 3 канал
     if i==128:                      # если в переменной хранится значение 128
-        pwrkey.digitalWrite(4, LOW) # отключаем 3 канал 
+        pwrfet.digitalWrite(4, LOW) # отключаем 3 канал 
                                     #
 #  Выводим силу тока 
 #  проходещего по 3 каналу:
-    j = pwrkey.currentRead(4)       # Считываем силу тока с третьего канала в переменную j.
+    j = pwrfet.currentRead(4)       # Считываем силу тока с третьего канала в переменную j.
     print("Сила тока %.3f" % j      #
           +" А.", end = '\r')       # Выводим силу тока в stdout.
 #  Приостанавливаем
