@@ -1,39 +1,37 @@
-# Данный пример постоянно меняет сигнал ШИМ на 3 канале модуля.    
-                                     # * Строки со звёздочкой являются необязательными.
-import numpy as np
-import math as m
-from time import sleep               #   Подключаем метод sleep их модуля time
-from pyiArduinoI2Crelay import *     #   Подключаем модуль для работы с ключём
-pwrkey = pyiArduinoI2Crelay(0x09)    #   Объявляем объект pwrkey
-                                     #   Если объявить объект без указания адреса (iarduino_I2C_Relay pwrkey ), то адрес будет найден автоматически.
-val = [0, 0, 0, 0]                   #   Определяем начальное аналоговое значение.
-channels = [1, 2, 3, 4]
-flag = True                          #   Определяем флаг приращения аналогового значения (0-убывает, 1-растёт).
-                                     #
-pwrkey.analogWrite(ALL_CHANNEL, 0)   # * Отключаем все каналы.
-print("Меняем сигнал ШИМ"            #
-      " на на всех каналах."         #
-      " Нажмите ctrl+c для"          #
-      " остановки")                  #
-                                     #
-try:
-    while True:                      #
-        for x in range(1, 360):      #
-            sleep(0.001)             #   Чем выше задержка, тем плавнее меняется аналоговый уровень.
-            val[0] = abs(m.cos(
-                         x*np.pi
-                         / 180))
-            val[0] = 1 - val[0]
-            val[1] = 1 - abs(m.cos(x*np.pi/180
-                         + np.pi/4))
-            val[2] = 1 - abs(m.sin(x*np.pi/180))
-            val[3] = 1 - abs(m.sin(x*np.pi/180
-                         + np.pi/4))
-            for i, j in zip(channels, val):                                   #
-                pwrkey.analogWrite(i, int(j*511))
-                                             #   Допустимые значения ШИМ - от 0 до 4095.
-except KeyboardInterrupt:
-    pwrkey.analogWrite(ALL_CHANNEL, LOW)
+#encoding=utf-8
+# Данный пример постоянно меняет сигнал ШИМ на всех каналах.
+from math import sin, cos, radians              # Из модуля математических функций импортируем синус, косинус и радианы 
+from time import sleep                          # Импортируем функцию ожидания 
+from pyiArduinoI2Crelay import *                # Подключаем модуль для работы с ключём
+pwrfet = pyiArduinoI2Crelay(0x09)               # Объявляем объект pwrfet
+                                                # Если объявить объект без указания адреса (pwrfet = pyiArduinoI2Crelay()), то адрес будет найден автоматически.
+val = [0, 0, 0, 0]                              # Определяем начальные аналоговые значение в списке.
+channels = (1, 2, 3, 4)                         # Определяем номера каналов в кортеже 
+                                                #
+pwrfet.analogWrite(ALL_CHANNEL, LOW)            # Отключаем все каналы.
+print("Меняем сигнал ШИМ"                       #
+      " на на всех каналах."                    #
+      " Нажмите ctrl+c для"                     #
+      " остановки")                             #
+                                                #
+try:                                            #
+    while True:                                 #
+         for x in range(1, 360):                # От 1 до 360 градусов
+            sleep(0.001)                        # Чем выше задержка, тем плавнее меняется аналоговый уровень.               
+            val[0] = cos(                       # Берем косинус угла 
+                        radians(x * x))         # Преобразуем углы в радианы
+            val[1] = sin(                       # Сдвиг на 90 градусов относительно val[0]
+                        radians(x * x))         # 
+            val[2] = -cos(                      # Сдвиг на 180 градусов относительно val[0]
+                         radians(x * x))        # 
+            val[3] = -sin(                      # Сдвиг на 270 градусов относительно val[0]
+                         radians(x * x))        # 
+            for i, j in zip(channels, val):     # Вызываем функцию zip для итерирования двух контейнеров
+                pwm = int(1 - j) * 2047         # Преобразуем интервал от -1 до 1 в интервал от 0 до 4094 
+                pwrfet.analogWrite(i, pwm)      # Допустимые значения ШИМ - от 0 до 4095.
+                                       
+except KeyboardInterrupt:                       # Если сценарий прерван с клавиатуры (ctrl+c)
+    pwrfet.analogWrite(ALL_CHANNEL, LOW)        # Выключаем все каналы
     print()
     print("программа остановлена,"
           " все каналы отключены")
