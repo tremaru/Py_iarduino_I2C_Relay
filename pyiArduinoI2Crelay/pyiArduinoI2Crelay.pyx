@@ -42,91 +42,116 @@ HIGH = 0x01
 LOW = 0x00
 
 from iarduino_I2C_Relay cimport iarduino_I2C_Relay
-from iarduino_I2C_Relay cimport iarduino_I2C
 
 cdef class pyiArduinoI2Crelay:
-    cdef iarduino_I2C_Relay c_relay
-    cdef iarduino_I2C b_relay
+    cdef iarduino_I2C_Relay c_module
 
-    def __cinit__(self, address=None):
+    def __cinit__(self, address=None, auto=None, bus=None):
+
         if address is not None:
-            self.c_relay = iarduino_I2C_Relay(address)
-            self.c_relay.begin()
+
+            self.c_module = iarduino_I2C_Relay(address)
+
+            if bus is not None:
+                self.changeBus(bus)
+
+            if auto is None:
+                #sleep(.5)
+                if not self.c_module.begin():
+
+                    print("ошибка инициализации модуля.\n"
+                          "Проверьте подключение и адрес модуля,"
+                          " возможно не включен интерфейс I2C.\n"
+                          " Запустите raspi-config и включите интерфейс"
+                          ", инструкция по включению:"
+                          " https://wiki.iarduino.ru/page/raspberry-i2c-spi/")
+
         else:
-            self.c_relay = iarduino_I2C_Relay()
-            self.c_relay.begin()
+
+            self.c_module = iarduino_I2C_Relay()
+
+            if bus is not None:
+                self.changeBus(bus)
+
+            if auto is None:
+                #sleep(.5)
+                if not self.c_module.begin():
+
+                    print("ошибка инициализации модуля.\n"
+                          "Проверьте подключение и адрес модуля, "
+                          " возможно не включен интерфейс I2C.\n"
+                          " Запустите raspi-config и включите интерфейс"
+                          ", инструкция по включению:"
+                          " https://wiki.iarduino.ru/page/raspberry-i2c-spi/")
 
     def begin(self):
-        return self.c_relay.begin()
+        return self.c_module.begin()
 
     def changeAddress(self, unsigned char newAddr):
-        return self.c_relay.changeAddress(newAddr)
+        return self.c_module.changeAddress(newAddr)
 
     def reset(self):
-        return self.c_relay.reset()
+        return self.c_module.reset()
 
     def getAddress(self):
-        return self.c_relay.getAddress()
+        return self.c_module.getAddress()
 
     def getVersion(self):
-        return self.c_relay.getVersion()
+        return self.c_module.getVersion()
 
     def getModel(self):
-        return self.c_relay.getModel()
+        return self.c_module.getModel()
 
     def digitalWrite(self, unsigned char channel, unsigned char level):
-        self.c_relay.digitalWrite(channel, level)
+        self.c_module.digitalWrite(channel, level)
 
     def digitalRead(self, unsigned char channel):
-        return self.c_relay.digitalRead(channel)
+        return self.c_module.digitalRead(channel)
     
     def analogWrite(self, unsigned char channel, unsigned short level):
-        self.c_relay.analogWrite(channel, level)
+        self.c_module.analogWrite(channel, level)
 
     def analogRead(self, unsigned char channel):
-        return self.c_relay.analogRead(channel)
+        return self.c_module.analogRead(channel)
 
     def analogAveraging(self, unsigned char coefficient):
-        self.c_relay.analogAveraging(coefficient)
+        self.c_module.analogAveraging(coefficient)
 
     def freqPWM(self, unsigned short frequency):
-        self.c_relay.freqPWM(frequency)
-
-#   def currentWrite(self, unsigned char channel, float current):
-#       self.c_relay.currentWrite(channel, current)
+        self.c_module.freqPWM(frequency)
 
     def currentWrite(self, unsigned char channel, float current, Rsh=None):
         if Rsh is not None:
-            self.c_relay.currentWrite(channel, current, Rsh)
+            self.c_module.currentWrite(channel, current, Rsh)
         else:
-            self.c_relay.currentWrite(channel, current)
+            self.c_module.currentWrite(channel, current)
 
     def currentRead(self,unsigned char channel):
-        return self.c_relay.currentRead(channel)
+        return self.c_module.currentRead(channel)
 
     def setCurrentProtection(self, unsigned char channel, float current, unsigned char rtype):
-        self.c_relay.setCurrentProtection(channel, current, rtype)
+        self.c_module.setCurrentProtection(channel, current, rtype)
 
     def getCurrentProtection(self, unsigned char channel):
-        return self.c_relay.getCurrentProtection(channel)
+        return self.c_module.getCurrentProtection(channel)
 
     def delCurrentProtection(self, unsigned char channel):
-        self.c_relay.delCurrentProtection(channel)
+        self.c_module.delCurrentProtection(channel)
 
     def resCurrentProtection(self, unsigned char channel):
-        self.c_relay.resCurrentProtection(channel)
+        self.c_module.resCurrentProtection(channel)
 
     def enableWDT(self, unsigned char time):
-        return self.c_relay.enableWDT(time)
+        return self.c_module.enableWDT(time)
 
     def disableWDT(self):
-        return self.c_relay.disableWDT()
+        return self.c_module.disableWDT()
 
     def resetWDT(self):
-        return self.c_relay.resetWDT()
+        return self.c_module.resetWDT()
 
     def getStateWDT(self):
-        return self.c_relay.getStateWDT()
+        return self.c_module.getStateWDT()
 
-    def changeBus(self, unsigned char bus):
-        self.b_relay.changeBus(bus)
+    def changeBus(self, bus):
+        return self.c_module.changeBus(bytes(bus, 'utf-8'))

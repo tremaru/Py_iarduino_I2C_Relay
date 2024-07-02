@@ -1,3 +1,8 @@
+from libcpp.string cimport string
+
+cdef extern from "iarduino_I2C_PI.cpp":
+    pass
+
 cdef extern from "iarduino_I2C_Relay.cpp":
     pass
 
@@ -28,6 +33,6 @@ cdef extern from "iarduino_I2C_Relay.h":
         bint disableWDT()
         bint resetWDT()
         bint getStateWDT()
-cdef extern from "iarduino_I2C_Relay_PI.h":
-    cdef cppclass iarduino_I2C:
-        void changeBus(unsigned char)
+        void changeBus(string)
+        bint getPullI2C()
+        bint setPullI2C(bint)
